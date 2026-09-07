@@ -1,0 +1,7 @@
+Repository - folder projektu wraz z historią zmian
+Main/master - główna gałąź
+git branch - tworzenie poboczna gałąź
+git commit - zapisywanie zmian
+git merge - połączenie zmian z jednej gałęzi do drugiej
+git checkout - przełączanie się między gałęziami
+git rebase - przenosi historię z jednej gałęzi na drugą
