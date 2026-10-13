@@ -9,82 +9,39 @@
 
     <script>
         $(function(){
-            let start = 0;
-            //object Event
+          $("#tekst").keyup(function(e){
+              if($("#tekst").val().length <= 10){
+                $("#pozostalo").text("Pozostało znaków: " + (10 - $("#tekst").val().length))
+              } else {
+                $("#pozostalo").text("Pozostało znaków: " + 0).addClass("blad");
+              }
 
+              if(e.key=="Escape"){
+                $("#pozostalo").text("Pozostało znaków: 10").removeClass("blad")
+                $(this).val("");
+              }
 
-            // $(document).on("keydown keyup keypress", function(){
-            //     $("#eventType").text(event.type);
-            // })
+              if(e.key=="Enter" &&  $(this).val() == "admin"){
+                console.log("Dostęp przyznany")
+              }
 
-            //  $(document).on("mousemove", function(){
-            //     $("#pageX").text(event.pageX);
-            //     $("#pageY").text(event.pageY);
-            // })
-            let  positionX = 0;
-            let  positionY = 0;
-            $(document).on("keydown", function(){
-               
-                 if(event.key === "a"){
-                  
-                  positionX = positionX - 10;
-
-                   $("#kwadrat").css("margin-left", positionX + "px");
-                 } 
-                 
-                  if(event.key === "d"){
-                  
-                  positionX = positionX + 10;
-
-                   $("#kwadrat").css("margin-left", positionX + "px");
-                 } 
-
-
-                  if(event.key === "w"){
-                  
-                  positionX = positionX - 10;
-
-                   $("#kwadrat").css("margin-top", positionX + "px");
-                 } 
-                 
-                  if(event.key === "s"){
-                  
-                  positionX = positionX + 10;
-
-                   $("#kwadrat").css("margin-top", positionX + "px");
-                 } 
-                 
-             })
-            
-             $("#jablko").css({
-                    "margin-left": Math.floor((Math.random() * 500) + 1 ) + "px",
-                     "margin-top": Math.floor((Math.random() * 500) + 1 ) + "px"
-             })
-
-           
+          })
+          
           })
 
 
     </script>
 
-    
+    <style>
+      .blad{
+        background-color: red;
+      }
+    </style>
 
 </head>
 <body>
-    <!-- <p>
-     Typ zdarzenia:
-     <span id="eventType">---</span>
-    </p>
-<p>
-   Pozycja myszy:
-   X = 
-    <span id="pageX">---</span>
-    Y =
-    <span id="pageY">---</span>
-</p> -->
-
-<div id="kwadrat" style="width: 200px; height: 200px; background-color: red;  position: absolute;">.</div>
-<div id="jablko" style="width: 20px; height: 20px; background-color: green; " >.</div>
+  <input type="text" id="tekst">
+  <p id="pozostalo">Pozostało znaków: 10</p>
 
 </body>
 </html>

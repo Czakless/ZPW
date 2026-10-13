@@ -7,78 +7,44 @@
     <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
     <script>
         $(function(){
-            $('#zmien').click(function(){
-                $("#tekst").text("Nowy tekst");
+            $("#hide").click(function(e){
+                $(this).hide()
             })
 
-            $('#przelacz').click(function(){
-                $("#pudelko").toggle();
+            $("#show").click(function(e){
+                $("#hide").show()
             })
 
-            $('#akapit').click(function(){
-                $(this).toggleClass("podswietlony");
+            $("#toggle").click(function(e){
+                $("#toggle2").toggle()
             })
 
-            $('#przywitaj').click(function(){
-                let imie = $("#imie").val().trim();
-                if(imie.length == 0){
-                    $("#wynik").text('Podaj imię!');
-                } else {
-                    $("#wynik").text('Cześć ' + imie + " !");
-                }
+            $("#slideUp").click(function(e){
+                $("#toggle2").slideUp()
             })
 
-            $("#akceptuje").change(function(){
-                if(this.checked){
-                    $("#wyslij").removeAttr("disabled")
-                } else {
-                    $("#wyslij").attr("disabled", "disabled")
-                }
-            })
-            $("li").each(function(index, element){
-                $(element).text((index + 1) + "." + $(element).text())
+
+            $("#slideDown").click(function(e){
+                $("#toggle3").slideDown()
             })
 
-            $('#zaloguj').click(function(){
-                let login = $("#login").val();
-                let haslo = $("#haslo").val();
-                if(login.length >= 3 && haslo.length >= 6){
-                    $("#komunikat").text("Zalogowano!").css("color", "green");
-                } {
-                    $("#komunikat").text("Hało musi mieć conajmniej 6 znaków a Login 3").css("color", "red");
-                }
+            $("#slideToggle").click(function(e){
+                $("#toggle2").slideToggle()
             })
         })
     </script>
     <style>
-        .podswietlony {background-color: yellow;}
+
     </style>
 </head>
 <body>
-    <p id="tekst">Stary tekst</p>
-    <button id="zmien">Zmień</button>
+    <p id="hide">Hide</p> </br>
+    <p id="show">Show</p></br>
 
-    <div id="pudelko">Widzisz mnie</div>
-    <button id="przelacz">Pokaż/Ukryj</button>
+    <p id="toggle">Toggle</p></br>
+    <p id="toggle2">Toggle</p></br>
 
-    <p id="akapit">Akapit</p>
-
-    <input type="text" id="imie">
-    <button id="przywitaj">Przywitaj</button>
-    <p id="wynik"></p>
-
-    <label><input type="checkbox" id="akceptuje"> Akceptuję regulamin </label>
-        <button id="wyslij" disabled>Wyślij</button>
-
-        <ul id="menu">
-            <li>Strona główna</li>
-            <li>O nas</li>
-            <li>Kontakt</li>
-        </ul>
-
-        <input type="text" id="login">
-        <input type="password" id="haslo">
-        <button id="zaloguj">Zaloguj</button>
-        <p id="komunikat"></p>
+    <p id="slideDown">Toggle</p></br>
+<p id="toggle3">Toggle</p></br>
 </body>
 </html>
