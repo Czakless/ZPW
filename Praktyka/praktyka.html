@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wprowadzenie</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+
+            //Zadanie 1
+
+            // $(document).keydown(function(e){
+
+            //     let szukaj = $("#szukaj").val().trim();
+
+            //     if(e.key == "Enter"){
+            //         if(szukaj == ""){
+            //         $("#wynik").text("Wpisz frazę!").css("color", "red")
+            //         } else {
+            //             $("#wynik").text(szukaj).css("color", "black")
+            //         }
+            //     }  
+
+            //     if(e.key == "Escape"){
+            //         $("#szukaj").val("");
+            //         $("#wynik").text("");
+            //     }
+            // })
+
+            //Zadanie 2
+
+            
+        //     $("#haslo").on("input",function(){
+
+        //         let haslo = $("#haslo").val().trim();
+        //         let sila = $("#sila");
+
+        //         if(haslo.length < 6 ){
+        //             sila.text("Słabo").toggleClass("slabe")
+        //         } else if (haslo.length >= 6 && haslo.length <= 9) {
+        //             sila.text("Średnie").toggleClass("srednie")
+        //         }else if (haslo.length >= 10) {
+        //             sila.text("Śilne").toggleClass("silne")
+        //         }
+
+        //     }) 
+
+        //Zadanie 3
+        })  
+    </script>
+    <style>
+        .slabe {
+            background-color: red;
+        }
+        .srednie {
+            background-color: orange;
+        }
+        .silne {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <!-- <input type="text" id="szukaj" placeholder="Szukaj...">
+    <p id="wynik"></p> -->
+
+
+    <!-- <input type="password" id="haslo">
+     <p id="sila"></p> -->
+
+    <form id="logowanie">
+        <input type="text" id="login" placeholder="Login">
+        <input type="password" id="pass" placeholder="Hasło">
+        <button type="submit">Zaloguj</button>
+    </form> 
+    <p id="info"></p>
+
+</body>
+</html>
