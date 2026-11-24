@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wprowadzenie</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            $("#hide").click(function(e){
+                $(this).hide()
+            })
+
+            $("#show").click(function(e){
+                $("#hide").show()
+            })
+
+            $("#toggle").click(function(e){
+                $("#toggle2").toggle()
+            })
+
+            $("#slideUp").click(function(e){
+                $("#toggle2").slideUp()
+            })
+
+
+            $("#slideDown").click(function(e){
+                $("#toggle3").slideDown()
+            })
+
+            $("#slideToggle").click(function(e){
+                $("#toggle2").slideToggle()
+            })
+        })
+    </script>
+    <style>
+
+    </style>
+</head>
+<body>
+    <p id="hide">Hide</p> </br>
+    <p id="show">Show</p></br>
+
+    <p id="toggle">Toggle</p></br>
+    <p id="toggle2">Toggle</p></br>
+
+    <p id="slideDown">Toggle</p></br>
+<p id="toggle3">Toggle</p></br>
+</body>
+</html>
